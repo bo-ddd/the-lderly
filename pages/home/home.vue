@@ -19,10 +19,11 @@
 
 		},
 		created() {
-			const type = uni.getSystemInfoSync().uniPlatform
-			if(type == 'web'){
-				this.height = 'calc(100vh - 209rpx)';
-			}
+			getApp().globalData.compatibleHeight();
+			// const type = uni.getSystemInfoSync().uniPlatform
+			// if(type == 'web'){
+				this.height = getApp().globalData.height;
+			// }
 		}
 	}
 </script>
