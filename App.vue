@@ -1,8 +1,8 @@
 <script>
 	export default {
-		data(){
-			return{
-				
+		data() {
+			return {
+
 			}
 		},
 		onLaunch: function() {
@@ -14,13 +14,19 @@
 		onHide: function() {
 			console.log('App Hide')
 		},
-		globalData:{
-			height:'100vh',
-			compatibleHeight(){
-				const type = uni.getSystemInfoSync().uniPlatform
-				if(type == 'web'){
-					this.height = 'calc(100vh - 209rpx)';
-					console.log(this.height)
+		globalData: {
+			height: '100vh',
+			compatibleHeight(num) {
+				const type = uni.getSystemInfoSync().uniPlatform;
+				if (num == 1) {
+					if (type == 'web') {
+						this.height = 'calc(100vh - 209rpx)';
+					}
+				} else if (num == 2) {
+
+					if (type == 'web') {
+						this.height = 'calc(100vh - 88rpx)';
+					}
 				}
 			}
 		}
