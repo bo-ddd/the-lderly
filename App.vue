@@ -6,17 +6,17 @@
 		methods: {
 			compatibleHeight(num) {
 				const type = uni.getSystemInfoSync().uniPlatform;
-				let height = '';
+				let h = '100vh';
 				if (num == 1) {
 					if (type == 'web') {
-						height = 'calc(100vh - 209rpx)';
+						h = 'calc(100vh - 209rpx)';
 					}
 				} else if (num == 2) {
 					if (type == 'web') {
-						height = 'calc(100vh - 88rpx)';
+						h = 'calc(100vh - 88rpx)';
 					}
 				}
-				return height;
+				return h;
 			}
 		},
 		onLaunch: function() {

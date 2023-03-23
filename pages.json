@@ -26,16 +26,14 @@
 			"style": {
 				"navigationBarTitleText": "提现"
 			}
+		}, {
+			"path": "pages/home/dressUp",
+			"style": {
+				"navigationBarTitleText": "装扮"
+			}
+
 		}
-	    ,{
-            "path" : "pages/home/dressUp",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "装扮"
-            }
-            
-        }
-    ],
+	],
 	"condition": { //模式配置，仅开发期间生效
 		"current": 0, //当前激活的模式（list 的索引项）
 		"list": [{
@@ -58,8 +56,7 @@
 			"name": "dressUp", //模式名称
 			"path": "pages/home/dressUp", //启动页面，必选
 			"query": "interval=4000&autoplay=false" //启动参数，在页面的onLoad函数里面得到。
-		}
-		]
+		}]
 	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -68,23 +65,21 @@
 		"backgroundColor": "#F8F8F8"
 	},
 	"tabBar": {
-			"borderStyle": "black",
-			"selectedColor": "#3ec247",
-			"color": "#444444",
-			"height":"60px",
-			"list": [
-				{
-					"pagePath": "pages/home/home",
-					"iconPath": "static/images/icon-farm.png",
-					"selectedIconPath": "static/images/icon-farm-selected.png",
-					"text": "农场"
-				},{
-					"pagePath": "pages/mine/mine",
-					"iconPath": "static/images/icon-mine.png",
-					"selectedIconPath": "static/images/icon-mine-selected.png",
-					"text": "我的"
-				}
-			]
-		},
+		"borderStyle": "black",
+		"selectedColor": "#3ec247",
+		"color": "#444444",
+		"height": "60px",
+		"list": [{
+			"pagePath": "pages/home/home",
+			"iconPath": "static/images/icon-farm.png",
+			"selectedIconPath": "static/images/icon-farm-selected.png",
+			"text": "农场"
+		}, {
+			"pagePath": "pages/mine/mine",
+			"iconPath": "static/images/icon-mine.png",
+			"selectedIconPath": "static/images/icon-mine-selected.png",
+			"text": "我的"
+		}]
+	},
 	"uniIdRouter": {}
 }
