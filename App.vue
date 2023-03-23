@@ -1,5 +1,10 @@
 <script>
 	export default {
+		data(){
+			return{
+				
+			}
+		},
 		onLaunch: function() {
 			console.log('App Launch')
 		},
@@ -8,6 +13,16 @@
 		},
 		onHide: function() {
 			console.log('App Hide')
+		},
+		globalData:{
+			height:'100vh',
+			compatibleHeight(){
+				const type = uni.getSystemInfoSync().uniPlatform
+				if(type == 'web'){
+					this.height = 'calc(100vh - 209rpx)';
+					console.log(this.height)
+				}
+			}
 		}
 	}
 </script>
