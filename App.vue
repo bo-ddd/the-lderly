@@ -5,6 +5,21 @@
 
 			}
 		},
+		methods:{
+			compatibleHeight(num) {
+				const type = uni.getSystemInfoSync().uniPlatform;
+				if (num == 1) {
+					if (type == 'web') {
+						this.height = 'calc(100vh - 209rpx)';
+					}
+				} else if (num == 2) {
+			
+					if (type == 'web') {
+						this.height = 'calc(100vh - 88rpx)';
+					}
+				}
+			}
+		},
 		onLaunch: function() {
 			console.log('App Launch')
 		},
@@ -15,20 +30,7 @@
 			console.log('App Hide')
 		},
 		globalData: {
-			height: '100vh',
-			compatibleHeight(num) {
-				const type = uni.getSystemInfoSync().uniPlatform;
-				if (num == 1) {
-					if (type == 'web') {
-						this.height = 'calc(100vh - 209rpx)';
-					}
-				} else if (num == 2) {
-
-					if (type == 'web') {
-						this.height = 'calc(100vh - 88rpx)';
-					}
-				}
-			}
+			
 		}
 	}
 </script>
