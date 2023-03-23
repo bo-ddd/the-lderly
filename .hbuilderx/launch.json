@@ -16,5 +16,6 @@
             "openVueDevtools" : true,
             "type" : "uni-app:h5"
         }
+
     ]
 }
