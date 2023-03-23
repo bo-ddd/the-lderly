@@ -68,7 +68,7 @@
 			}
 		},
 		created(){
-			getApp().globalData.compatibleHeight();
+			getApp().globalData.compatibleHeight(1);
 			this.height = getApp().globalData.height;
 		},
 		methods: {
