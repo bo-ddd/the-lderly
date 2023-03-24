@@ -1,22 +1,23 @@
 <script>
 	export default {
 		data() {
-			return {}
+			return {
+
+			}
 		},
-		methods: {
+		methods:{
 			compatibleHeight(num) {
 				const type = uni.getSystemInfoSync().uniPlatform;
-				let h = '100vh';
 				if (num == 1) {
 					if (type == 'web') {
-						h = 'calc(100vh - 209rpx)';
+						this.height = 'calc(100vh - 209rpx)';
 					}
 				} else if (num == 2) {
+			
 					if (type == 'web') {
-						h = 'calc(100vh - 88rpx)';
+						this.height = 'calc(100vh - 88rpx)';
 					}
 				}
-				return h;
 			}
 		},
 		onLaunch: function() {
@@ -29,7 +30,7 @@
 			console.log('App Hide')
 		},
 		globalData: {
-
+			
 		}
 	}
 </script>
