@@ -1,8 +1,8 @@
 {
     "name" : "theElderly-project",
-    "appid" : "",
+    "appid" : "__UNI__860AE70",
     "description" : "",
-    "versionName" : "1.0.0",
+    "versionName" : "1.0.1",
     "versionCode" : "100",
     "transformPx" : false,
     /* 5+App特有相关 */
@@ -17,7 +17,9 @@
             "delay" : 0
         },
         /* 模块配置 */
-        "modules" : {},
+        "modules" : {
+            "OAuth" : {}
+        },
         /* 应用发布信息 */
         "distribute" : {
             /* android打包配置 */
@@ -41,9 +43,19 @@
                 ]
             },
             /* ios打包配置 */
-            "ios" : {},
+            "ios" : {
+                "dSYMs" : false
+            },
             /* SDK配置 */
-            "sdkConfigs" : {}
+            "sdkConfigs" : {
+                "oauth" : {
+                    "weixin" : {
+                        "appid" : "wxfb783e721083f3fd",
+                        "UniversalLinks" : ""
+                    }
+                },
+                "ad" : {}
+            }
         }
     },
     /* 快应用特有相关 */
