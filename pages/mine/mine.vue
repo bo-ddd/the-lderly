@@ -40,7 +40,7 @@
 	export default {
 		data() {
 			return {
-				height:'100vh',
+				height:'',
 				scrollTop: 0,
 				old: {
 				scrollTop: 0
@@ -68,7 +68,8 @@
 			}
 		},
 		created(){
-			getApp().compatibleHeight(1);
+			let height = getApp().compatibleHeight(1);
+			this.height = height
 		},
 		methods: {
 			
