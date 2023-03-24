@@ -168,7 +168,7 @@
 }
 // scroll
 .scroll-Y {
-			height: 75%;
+			height: 80%;
 		}
 
 </style>
