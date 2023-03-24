@@ -32,6 +32,8 @@
 			</view>
 			
 				</scroll-view>
+				
+				<tab-bar></tab-bar>
 		
 	</view>
 </template>
@@ -88,8 +90,7 @@
 		margin: 0 auto;
 	}
 .content{
-	height: 100vh;
-
+	height: calc(100vh - 100rpx);
 	background: url("@/static/images/mine.background.png") no-repeat;
 	background-size:cover;
 }

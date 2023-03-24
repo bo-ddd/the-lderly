@@ -40,7 +40,9 @@
 				<view class="text">喂小羊</view>
 			</view>
 		</view>
+		<tab-bar></tab-bar>
 	</view>
+	
 </template>
 
 <script>
