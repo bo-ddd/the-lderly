@@ -1,20 +1,19 @@
 <template>
 	<view class="main" :style="{'height':height}">
 		<view class="show-sheep">
-			<image src="../../static/images/sheep.png"></image>
+			<image :src="showSheepUrl"></image>
 			<view class="shadow"></view>
 		</view>
 		<view class="sheep-icon">
 			<view class="container">
-				<image src="../../static/images/yang1.png" mode=""></image>
-				<image src="../../static/images/yang2.png" mode=""></image>
-				<image src="../../static/images/yang3.png" mode=""></image>
-				<image src="../../static/images/yang4.png" mode=""></image>
-				<image src="../../static/images/yang5.png" mode=""></image>
-				<image src="../../static/images/yang6.png" mode=""></image>
-				<image src="../../static/images/yang7.png" mode=""></image>
-				<image src="../../static/images/yang8.png" mode=""></image>
+				<view class="item" v-for="(item,index) in sheepInfo"
+				 :key="index" 
+				 :class="item.id == sheepId ? 'items' :''" 
+				 @click="selected(item.id,item.iconUrl)">
+					<image :src="item.iconUrl" mode="">{{item.name}}</image>
+				</view>
 			</view>
+			<button type="default" class="preserve">保存</button>
 		</view>
 	</view>
 </template>
@@ -23,14 +22,69 @@
 	export default {
 		data() {
 			return {
-				height:'100vh'
+				showSheepUrl:'../../static/images/sheep.png',
+				sheepId:0,
+				height:'100vh',
+				sheepInfo:[
+					{
+						id:1,
+						iconUrl:'../../static/images/yang1.png',
+						name:'小红帽',
+						isDeblocking:1
+					},
+					{
+						id:2,
+						iconUrl:'../../static/images/yang2.png',
+						name:'卫衣王子',
+						isDeblocking:1
+					},
+					{
+						id:3,
+						iconUrl:'../../static/images/yang3.png',
+						name:'酷酷王子',
+						isDeblocking:1
+					},
+					{
+						id:4,
+						iconUrl:'../../static/images/yang4.png',
+						name:'飞行员',
+						isDeblocking:1
+					},
+					{
+						id:5,
+						iconUrl:'../../static/images/yang5.png',
+						name:'牛仔羊',
+						isDeblocking:1
+					},
+					{
+						id:6,
+						iconUrl:'../../static/images/yang6.png',
+						name:'侦探羊',
+						isDeblocking:1
+					},
+					{
+						id:7,
+						iconUrl:'../../static/images/yang7.png',
+						name:'博士羊',
+						isDeblocking:1
+					},
+					{
+						id:8,
+						iconUrl:'../../static/images/yang8.png',
+						name:'老村长',
+						isDeblocking:1
+					}
+				]
 			}
 		},
 		onLoad() {
 	
 		},
 		methods: {
-	
+			selected:function(id,iconUrl){
+				this.sheepId = id;
+				this.showSheepUrl = iconUrl;
+			}
 		},
 		created() {
 			getApp().compatibleHeight(1);
@@ -49,21 +103,48 @@
 	width:100vw;
 	height: 30vh;
 	background-color:rgb(254 ,221, 196);
-	overflow-x:scroll;
 	box-sizing:border-box;
 }
 .container{
-	width:auto;
-	white-space:nowrap;
+	display:flex;	
+	overflow-x: auto;
+}
+.container::-webkit-scrollbar {
+    display: none;
+}
+.container .item{
+	flex: 0 0 100rpx;
+	margin: 20rpx 20rpx 0 20rpx;
+	background-color: rgb(247,204,153);
+	border-radius:20rpx;
+	border:2rpx solid #fff;
+	box-shadow: 0rpx 0rpx 28rpx 4rpx rgb(240 158 95) inset;
+	color:rgb(116, 52, 50);
+	text-align:center;
+	font-size:20rpx;
+	padding-bottom: 10rpx;
+}
+.items{
+	flex: 0 0 100rpx;
+	margin: 20rpx 20rpx 0 20rpx;
+	background-color: rgb(116, 52, 50) !important;
+	border-radius:20rpx;
+	border:2rpx solid #fff;
+	box-shadow: 0rpx 0rpx 28rpx 4rpx rgb(116,52 ,50) inset !important;
+	color:rgb(247,204,153) !important;
+	text-align:center;
+	font-size:20rpx;
+	padding-bottom: 10rpx;
 }
 .sheep-icon image{
-	width:300rpx;
-	height: 30vh;
+	width:120rpx;
+	height: 200rpx;
 	display:inline-block;
+	padding: 10rpx 20rpx 0 20rpx;
 }
 .show-sheep image{
-	width:220rpx;
-	height: 320rpx;
+	width:240rpx;
+	height: 340rpx;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
@@ -80,5 +161,16 @@
 	left: 50%;
 	transform: translateX(-50%);
 	bottom: 39%;
+}
+.preserve{
+	width:300rpx;
+	background-color: rgb(247,204,153);
+	border-radius:20rpx;
+	border:2rpx solid #fff;
+	box-shadow: 0rpx 0rpx 28rpx 4rpx rgb(240 158 95) inset;
+	color:rgb(116 52 50);
+	text-align:center;
+	font-size:24rpx;
+	margin-top: 10rpx;
 }
 </style>
