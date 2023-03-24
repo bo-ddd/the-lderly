@@ -25,6 +25,7 @@
 			"path": "pages/withdrawal/withdrawal",
 			"style": {
 				"navigationBarTitleText": "提现"
+				// "navigationStyle": "custom"
 			}
 		}
 	],

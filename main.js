@@ -6,7 +6,9 @@ import uView from "uview-ui";
 Vue.use(uView);
 Vue.config.productionTip = false
 App.mpType = 'app'
-
+console.log(App.globalData)
+console.log(App.globalData)
+console.log(App.globalData)
 try {
   function isPromise(obj) {
     return (

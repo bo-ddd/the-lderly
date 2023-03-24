@@ -45,7 +45,7 @@
 						</view>
 						<view class="right-icon">
 							<image class="pass-image" src="../../static/images/icon-pass.png" mode=""></image>
-							未实名<image class="link-image" src="" mode=""></image>
+							未实名<image class="link-image ml-20 mr-15" src="../../static/images/icon-arrowhead-right.png" mode=""></image>
 						</view>
 					</view>
 					<view class="item">
@@ -54,7 +54,7 @@
 							<text class="fs-24">支付宝</text>
 						</view>
 						<view class="right-icon">
-							未设置<image class="link-image" src="" mode=""></image>
+							未设置<image class="link-image ml-20 mr-15" src="../../static/images/icon-arrowhead-right.png" mode=""></image>
 						</view>
 					</view>
 					<view class="item">
@@ -176,6 +176,7 @@
 						}
 
 						.right-icon {
+							height: 60rpx;
 							display: flex;
 							align-items: center;
 							font-size: 24rpx;
@@ -208,7 +209,7 @@
 						font-size: 28rpx;
 						text-stroke: 4rpx #1c1b19;
 						padding: 20rpx 140rpx;
-						border: 2rpx solid #4b1802;
+						border: 4rpx solid #4b1802;
 						border-radius: 20rpx;
 						background: linear-gradient(to bottom, #fbaf5b, #da5f2c);
 						color: white;
@@ -280,6 +281,12 @@
 	}
 	.mr-10{
 		margin-right: 10rpx;
+	} 
+	.ml-20{
+		margin-left: 20rpx;
+	}
+	.mr-15{
+		margin-right: 15rpx;
 	}
 	.text-center {
 		text-align: center;
