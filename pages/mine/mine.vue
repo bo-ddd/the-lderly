@@ -32,6 +32,8 @@
 			</view>
 			
 				</scroll-view>
+				
+				<tab-bar ref="tabbar"></tab-bar>
 		
 	</view>
 </template>
@@ -69,7 +71,6 @@
 		},
 		created(){
 			let height = getApp().compatibleHeight(1);
-			this.height = height
 		},
 		methods: {
 			
@@ -88,8 +89,7 @@
 		margin: 0 auto;
 	}
 .content{
-	height: 100vh;
-
+	height: calc(100vh - 110rpx);
 	background: url("@/static/images/mine.background.png") no-repeat;
 	background-size:cover;
 }
@@ -168,7 +168,7 @@
 }
 // scroll
 .scroll-Y {
-			height: 80%;
+			height: 75%;
 		}
 
 </style>

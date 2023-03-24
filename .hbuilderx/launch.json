@@ -4,29 +4,27 @@
     "version" : "0.0",
     "configurations" : [
         {
-            "app-plus" : {
-                "launchtype" : "local"
-            },
-            "default" : {
-                "launchtype" : "local"
-            },
-            "mp-weixin" : {
-                "launchtype" : "local"
-            },
-            "type" : "uniCloud"
+        	"app-plus" : 
+        	{
+        		"launchtype" : "local"
+        	},
+        	"default" : 
+        	{
+        		"launchtype" : "local"
+        	},
+        	"mp-weixin" : 
+        	{
+        		"launchtype" : "local"
+        	},
+        	"type" : "uniCloud"
         },
         {
             "openVueDevtools" : true,
             "type" : "uni-app:h5"
         },
         {
-            "openVueDevtools" : false,
             "playground" : "standard",
             "type" : "uni-app:app-android"
-        },
-        {
-            "openVueDevtools" : false,
-            "type" : "uni-app:app-ios"
         }
     ]
 }
