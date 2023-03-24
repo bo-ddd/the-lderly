@@ -36,5 +36,20 @@
 
 <style lang="scss">
 	@import "uview-ui/index.scss";
+
 	/*每个页面公共css */
+	.flex-center {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.align-center{
+		display: flex;
+		align-items: center;
+	}
+	.space-around{
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
 </style>
