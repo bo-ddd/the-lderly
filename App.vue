@@ -1,8 +1,25 @@
 <script>
 	export default {
-		data(){
-			return{
-				
+		data() {
+			return {
+
+			}
+		},
+		methods: {
+			compatibleHeight(num) {
+				const type = uni.getSystemInfoSync().uniPlatform;
+				let h = '100vh';
+				if (num == 1) {
+					if (type == 'web') {
+						h = 'calc(100vh - 209rpx)';
+					}
+				} else if (num == 2) {
+
+					if (type == 'web') {
+						h = 'calc(100vh - 88rpx)';
+					}
+				}
+				return h
 			}
 		},
 		onLaunch: function() {
@@ -14,20 +31,30 @@
 		onHide: function() {
 			console.log('App Hide')
 		},
-		globalData:{
-			height:'100vh',
-			compatibleHeight(){
-				const type = uni.getSystemInfoSync().uniPlatform
-				if(type == 'web'){
-					this.height = 'calc(100vh - 209rpx)';
-					console.log(this.height)
-				}
-			}
+		globalData: {
+
 		}
 	}
 </script>
 
 <style lang="scss">
 	@import "uview-ui/index.scss";
+
 	/*每个页面公共css */
+	.flex-center {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.align-center {
+		display: flex;
+		align-items: center;
+	}
+
+	.space-around {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
 </style>
