@@ -14,7 +14,7 @@
 			</view>
 			<view class="other">
 				<image src="../../static/images/icon-qq.png" class="icon-other" mode="widthFix"></image>
-				<image src="../../static/images/icon-wx.png" class="icon-other" mode="widthFix"></image>
+				<image src="../../static/images/icon-wx.png" @click="getCode()" class="icon-other" mode="widthFix"></image>
 			</view>
 		</view>
 	</view>
@@ -43,13 +43,16 @@
 			},
 			Submit() {
 				console.log(this.from)
-			}
+			},
+			getCode() { //微信网页授权返回code
+				let wx_url =
+					'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx29bc7e1d33d38e7f&redirect_uri=https%3A%2F%2Flearn-card.cxkey.cn&response_type=code&scope=snsapi_userinfo#wechat_redirect'
+				window.location.href = wx_url;
+			},
 		},
 		created() {
-			console.log(getApp())
 			let height = getApp().compatibleHeight(2);
 			this.height = height;
-			console.log('this.height', this.height);
 		}
 	}
 </script>
