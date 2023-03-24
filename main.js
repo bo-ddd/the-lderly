@@ -10,7 +10,6 @@ App.mpType = 'app'
 // tabbar组件挂载全局
 import tabBar from './components/tabbar/tabbar.vue'
 Vue.component('tab-bar',tabBar) //挂载
-
 try {
   function isPromise(obj) {
     return (
