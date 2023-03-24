@@ -1,5 +1,5 @@
 <template>
-	<view class="login flex-center" :style="{'height':height}">
+	<view class="login flex-center" :style="{'height': height}">
 		<view class="login-box align-center">
 			<input class="input-name" @input="getUserName" maxlength="11" placeholder-style="color:#fff"
 				placeholder="手机号/邮箱" />
@@ -46,8 +46,10 @@
 			}
 		},
 		created() {
+			console.log(getApp())
 			let height = getApp().compatibleHeight(2);
 			this.height = height;
+			console.log('this.height', this.height);
 		}
 	}
 </script>
