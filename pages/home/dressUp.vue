@@ -5,7 +5,7 @@
 			<view class="shadow"></view>
 		</view>
 		<view class="sheep-icon">
-			<view class="hhh">
+			<view class="container">
 				<image src="../../static/images/yang1.png" mode=""></image>
 				<image src="../../static/images/yang2.png" mode=""></image>
 				<image src="../../static/images/yang3.png" mode=""></image>
@@ -33,8 +33,7 @@
 	
 		},
 		created() {
-			getApp().globalData.compatibleHeight();
-			this.height = getApp().globalData.height;
+			getApp().compatibleHeight(1);
 		}
 	}
 </script>
@@ -47,13 +46,20 @@
 	background-repeat: no-repeat;
 }
 .sheep-icon{
+	width:100vw;
 	height: 30vh;
 	background-color:rgb(254 ,221, 196);
-	display:inline-block;
+	overflow-x:scroll;
+	box-sizing:border-box;
+}
+.container{
+	width:auto;
+	white-space:nowrap;
 }
 .sheep-icon image{
 	width:300rpx;
-	height: 100%;
+	height: 30vh;
+	display:inline-block;
 }
 .show-sheep image{
 	width:220rpx;
