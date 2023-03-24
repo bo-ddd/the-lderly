@@ -59,9 +59,9 @@
 		}]
 	},
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "薅羊毛",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarBackgroundColor": "#ffffff",
+		"navigationBarTextStyle": "black",
 		"backgroundColor": "#F8F8F8"
 	},
 	"tabBar": {

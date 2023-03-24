@@ -8,23 +8,18 @@
 	export default {
 		data() {
 			return {
-				height: ''
+				height: '100vh'
 			}
 		},
 		onLoad() {
 
 		},
-		onShow() {
-			let height = getApp().compatibleHeight(2);
-			this.height = height;
-		},
 		methods: {
 
 		},
 		created() {
-			// let height = getApp().compatibleHeight(2);
-			// console.log('login', height);
-			// console.log('this.height', this.height);
+			let height = getApp().compatibleHeight(2);
+			this.height = height;
 		}
 	}
 </script>
