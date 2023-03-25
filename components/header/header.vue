@@ -1,5 +1,5 @@
 <template>
-	<view class="header" :style="{'height':headHeight+'rpx','padding-top':paddingTop+'rpx','justify-content':ifBack?'space-between':'center'}">
+	<view class="header" :style="{'height':headHeight+'rpx','padding':'0 '+(paddingRight+'rpx')||'10rpx','padding-top':paddingTop+'rpx','justify-content':ifBack?'space-between':'center'}">
 		<image v-if="ifBack" class="image" src="../../static/images/icon-back-left.png" mode=""></image>
 		<text :data-content="title" class="title">{{title}}</text>
 		<view v-if="ifBack" class="block"></view>
@@ -19,6 +19,7 @@
 			setHeaderHeight() {
 				this.headHeight = getApp().globalData.headHeight;
 				this.paddingTop = getApp().globalData.paddingTop;
+				this.paddingRight = getApp().globalData.paddingright;
 			}
 		},
 		mounted: function() {

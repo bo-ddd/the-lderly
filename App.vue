@@ -24,14 +24,17 @@
 			getHeaderHeight(){
 				let viewType = uni.getSystemInfoSync().uniPlatform; //设备类型
 				let statusHeight = uni.getSystemInfoSync().statusBarHeight; //状态栏高度
+				let appWidth=uni.getSystemInfoSync().windowHeight;
 				let headHight;
 				if (viewType == 'mp-weixin') {
 					console.log('wx')
 					let cachetPosition = wx.getMenuButtonBoundingClientRect(); //微信小程序胶囊信息
+					console.log(cachetPosition)
 					headHight = statusHeight + (cachetPosition.top - statusHeight) * 2 + cachetPosition.height;
 					console.log(cachetPosition)
 					this.globalData.headHeight = headHight * 2;
 					this.globalData.paddingTop = statusHeight * 2;
+					this.globalData.paddingRight = (appWidth-cachetPosition.right) * 2;
 				} else if (viewType == 'app') {
 					console.log('app')
 					this.globalData.headHeight = 130;
@@ -53,7 +56,8 @@
 		},
 		globalData: {
 			headHeight:'',
-			paddingTop:''
+			paddingTop:'',
+			paddingRight:''
 		}
 	}
 </script>
