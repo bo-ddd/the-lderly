@@ -20,7 +20,7 @@
             "type" : "uni-app:h5"
         },
         {
-            "playground" : "standard",
+            "playground" : "custom",
             "type" : "uni-app:app-android"
         }
     ]

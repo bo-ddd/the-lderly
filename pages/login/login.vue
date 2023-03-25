@@ -13,7 +13,8 @@
 				<view class="thread"></view>
 			</view>
 			<view class="other">
-				<image src="../../static/images/icon-qq.png" class="icon-other" mode="widthFix"></image>
+				<image src="../../static/images/icon-qq.png" @click="nav('/pages/home/home')" class="icon-other"
+					mode="widthFix"></image>
 				<image src="../../static/images/icon-wx.png" @click="getCode()" class="icon-other" mode="widthFix">
 				</image>
 			</view>
@@ -29,7 +30,8 @@
 				from: {
 					username: '',
 					password: '',
-				}
+				},
+				code: ''
 			}
 		},
 		onLoad() {
@@ -49,10 +51,12 @@
 					"onlyAuthorize": true,
 					success(res) {
 						console.log('res', res);
-						const {
-							code
-						} = res;
-						
+						let code = res.code;
+						uni.showToast({
+							title: 'code:' + code, //显示的文字
+							duration: 2000, //显示多少毫秒，默认1500毫秒，时间到自动隐藏
+							icon: "none" //自定义显示的图标，默认成功success，错误error,加载loading，不显示图标是none
+						})
 					}
 				})
 				// 这是注册的接口
@@ -75,6 +79,11 @@
 				let wx_url =
 					'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx29bc7e1d33d38e7f&redirect_uri=https%3A%2F%2Flearn-card.cxkey.cn&response_type=code&scope=snsapi_userinfo#wechat_redirect'
 				window.location.href = wx_url;
+			},
+			nav(url) {
+				uni.reLaunch({
+					url
+				})
 			},
 		},
 		created() {
