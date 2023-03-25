@@ -24,9 +24,9 @@
 		},
 		onLaunch: function() {
 			console.log('App Launch')
-				uni.hideTabBar()
 		},
 		onShow: function() {
+			uni.hideTabBar();
 			console.log('App Show')
 		},
 		onHide: function() {
