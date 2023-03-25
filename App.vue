@@ -5,23 +5,26 @@
 
 			}
 		},
-		methods:{
+		methods: {
 			compatibleHeight(num) {
 				const type = uni.getSystemInfoSync().uniPlatform;
+				let h = '100vh';
 				if (num == 1) {
 					if (type == 'web') {
-						this.height = 'calc(100vh - 209rpx)';
+						h = 'calc(100vh - 200rpx)';
 					}
 				} else if (num == 2) {
-			
+
 					if (type == 'web') {
-						this.height = 'calc(100vh - 88rpx)';
+						h = 'calc(100vh - 88rpx)';
 					}
 				}
+				return h
 			}
 		},
 		onLaunch: function() {
 			console.log('App Launch')
+				uni.hideTabBar()
 		},
 		onShow: function() {
 			console.log('App Show')
@@ -30,7 +33,7 @@
 			console.log('App Hide')
 		},
 		globalData: {
-			
+
 		}
 	}
 </script>
@@ -44,11 +47,13 @@
 		align-items: center;
 		justify-content: center;
 	}
-	.align-center{
+
+	.align-center {
 		display: flex;
 		align-items: center;
 	}
-	.space-around{
+
+	.space-around {
 		display: flex;
 		align-items: center;
 		justify-content: space-around;

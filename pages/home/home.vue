@@ -16,11 +16,11 @@
 		</view>
 		<!-- 装扮 dress up -->
 		<view class="min-fun">
-			<view class="dress-up" @click="toDressUp">
+			<view class="dress-up">
 				<image src="../../static/images/dress-up.png" mode=""></image>
 				<view class="text">装扮</view>
 			</view>
-			<view class="withdrawal" @click="toWithdrawal">
+			<view class="withdrawal">
 				<image src="../../static/images/Withdrawal.png" mode=""></image>
 				<view class="text">提现</view>
 			</view>
@@ -60,16 +60,7 @@
 
 		},
 		methods: {
-			toDressUp:function(){ 
-				uni.navigateTo({
-					url: '../home/dressUp'
-				});
-			},
-			toWithdrawal:function(){
-				uni.navigateTo({
-					url:'/pages/withdrawal/withdrawal'
-				})
-			}
+
 		},
 		created() {
 			getApp().compatibleHeight(1);
