@@ -19,6 +19,14 @@
 			setHeaderHeight() {
 				this.headHeight = getApp().globalData.headHeight;
 				this.paddingTop = getApp().globalData.paddingTop;
+			},
+			back(){
+				uni.navigateBack({
+					delta:1,
+					success:(event)=>{
+						prevPage.$vm.reload()
+					}
+				})
 			}
 		},
 		mounted: function() {
