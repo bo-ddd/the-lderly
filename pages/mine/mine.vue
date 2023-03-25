@@ -33,7 +33,7 @@
 			
 				</scroll-view>
 				
-				<tab-bar></tab-bar>
+				<tab-bar ref="tabbar"></tab-bar>
 		
 	</view>
 </template>
@@ -70,8 +70,7 @@
 			}
 		},
 		created(){
-			let height = getApp().compatibleHeight(1);
-			this.height = height
+			this.height = getApp().compatibleHeight(1);
 		},
 		methods: {
 			
@@ -90,7 +89,6 @@
 		margin: 0 auto;
 	}
 .content{
-	height: calc(100vh - 100rpx);
 	background: url("@/static/images/mine.background.png") no-repeat;
 	background-size:cover;
 }
