@@ -1,6 +1,6 @@
 <template>
 	<view class="">
-		<head-nav title="我的钱包"></head-nav>
+		<head-nav title="我的钱包" ifBack="true"></head-nav>
 		<view class="page-box">
 			<view class="box wrap">
 				<view class="wrap2 pr-30 title brown-text align-right">
