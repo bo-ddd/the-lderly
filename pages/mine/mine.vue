@@ -70,7 +70,7 @@
 			}
 		},
 		created(){
-			let height = getApp().compatibleHeight(1);
+			this.height = getApp().compatibleHeight(1);
 		},
 		methods: {
 			
@@ -89,7 +89,6 @@
 		margin: 0 auto;
 	}
 .content{
-	height: calc(100vh - 110rpx);
 	background: url("@/static/images/mine.background.png") no-repeat;
 	background-size:cover;
 }
@@ -168,7 +167,7 @@
 }
 // scroll
 .scroll-Y {
-			height: 75%;
+			height: 80%;
 		}
 
 </style>
