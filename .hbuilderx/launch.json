@@ -4,22 +4,19 @@
     "version" : "0.0",
     "configurations" : [
         {
-        	"app-plus" : 
-        	{
-        		"launchtype" : "local"
-        	},
-        	"default" : 
-        	{
-        		"launchtype" : "local"
-        	},
-        	"mp-weixin" : 
-        	{
-        		"launchtype" : "local"
-        	},
-        	"type" : "uniCloud"
+            "app-plus" : {
+                "launchtype" : "local"
+            },
+            "default" : {
+                "launchtype" : "local"
+            },
+            "mp-weixin" : {
+                "launchtype" : "local"
+            },
+            "type" : "uniCloud"
         },
         {
-            "openVueDevtools" : true,
+            "openVueDevtools" : false,
             "type" : "uni-app:h5"
         },
         {

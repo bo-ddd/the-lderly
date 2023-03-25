@@ -14,7 +14,8 @@
 			</view>
 			<view class="other">
 				<image src="../../static/images/icon-qq.png" class="icon-other" mode="widthFix"></image>
-				<image src="../../static/images/icon-wx.png" @click="getCode()" class="icon-other" mode="widthFix"></image>
+				<image src="../../static/images/icon-wx.png" @click="getCode()" class="icon-other" mode="widthFix">
+				</image>
 			</view>
 		</view>
 	</view>
@@ -43,6 +44,32 @@
 			},
 			Submit() {
 				console.log(this.from)
+				uni.login({
+					"provider": 'weixin',
+					"onlyAuthorize": true,
+					success(res) {
+						console.log('res', res);
+						const {
+							code
+						} = res;
+						
+					}
+				})
+				// 这是注册的接口
+				// this.getUserinfo('/api/user/create', 'POST', {
+				// 	email: '111111@qq.com',
+				// 	...this.from
+				// })
+			},
+			getUserinfo(url, method, data) {
+				uni.request({
+					url,
+					method,
+					data,
+					success(res) {
+						console.log(res)
+					}
+				})
 			},
 			getCode() { //微信网页授权返回code
 				let wx_url =
@@ -51,8 +78,7 @@
 			},
 		},
 		created() {
-			let height = getApp().compatibleHeight(2);
-			this.height = height;
+			this.height = getApp().compatibleHeight(2);
 		}
 	}
 </script>
@@ -95,7 +121,7 @@
 
 		.footer {
 			width: 100%;
-			height: calc(100% - 950rpx);
+			height: calc(100% - 1000rpx);
 
 			.border-title {
 				width: 100%;
