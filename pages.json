@@ -81,15 +81,9 @@
 		"color": "#444444",
 		"height": "60px",
 		"list": [{
-			"pagePath": "pages/home/home",
-			"iconPath": "static/images/icon-farm.png",
-			"selectedIconPath": "static/images/icon-farm-selected.png",
-			"text": "农场"
+			"pagePath": "pages/home/home"
 		}, {
-			"pagePath": "pages/mine/mine",
-			"iconPath": "static/images/icon-mine.png",
-			"selectedIconPath": "static/images/icon-mine-selected.png",
-			"text": "我的"
+			"pagePath": "pages/mine/mine"
 		}]
 	},
 	"uniIdRouter": {}
