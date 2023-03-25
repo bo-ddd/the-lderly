@@ -8,7 +8,9 @@ Vue.config.productionTip = false
 App.mpType = 'app'
 
 // tabbar组件挂载全局
-import tabBar from './components/tabbar/tabbar.vue'
+import tabBar from './components/tabbar/tabbar.vue';
+import header from './components/header/header.vue'
+Vue.component('head-nav',header) //挂载
 Vue.component('tab-bar',tabBar) //挂载
 try {
   function isPromise(obj) {

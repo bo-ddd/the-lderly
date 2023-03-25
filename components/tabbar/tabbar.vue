@@ -1,16 +1,15 @@
 <template>
-	<view v-if="showselected"
-	   <view class="tabbar">
+	<view class="tabbar">
 			<view class="navigator">
 				<view class="navigator-item" v-for="(item,index) in tabBar.list" :key="item.pagePath"
 					@click="switchTab(item,index)">
-						<img :src="item.iconPath" class="icon" v-if="selectedIndex !== index">
-						<img :src="item.selectedIconPath" class="icon" v-else>
-						<text :class="['item-text',{'text-active':selectedIndex === index}]">{{item.text}}</text>
-				</view> 
+					<img :src="item.iconPath" class="icon" v-if="selectedIndex !== index">
+					<img :src="item.selectedIconPath" class="icon" v-else>
+					<text :class="['item-text',{'text-active':selectedIndex === index}]">{{item.text}}</text>
+				</view>
 			</view>
 		</view>
-	  </view>
+		</view>
 </template>
 
 <script>
@@ -36,7 +35,9 @@
 		},
 		methods: {
 			switchTab(item, index) {
+							console.log(item.pagePath)
 							let url = '/' + item.pagePath
+							console.log(url)
 							let pagePath = url
 							uni.switchTab({url})
 							this.tabBar.list.forEach((v, i) => {
